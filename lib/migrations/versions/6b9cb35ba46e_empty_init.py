@@ -17,8 +17,8 @@ depends_on = None
 
 
 def upgrade() -> None:
-    pass
+    op.rename_table('student', 'students')
 
 
 def downgrade() -> None:
-    pass
+    op.rename_table('students', 'student')
